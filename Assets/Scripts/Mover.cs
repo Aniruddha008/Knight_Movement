@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,8 +24,12 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-       if(Input.GetKey(KeyCode.W))
+        Movement();
+    }
+
+    private void Movement()
+    {
+               if(Input.GetKey(KeyCode.W))
        {
            moveDirection = new Vector3(0, 0, 1);
            moveDirection *= speed;
@@ -58,7 +63,5 @@ public class Mover : MonoBehaviour
 
        moveDirection.y =- gravity*Time.deltaTime;
        controller.Move(moveDirection * Time.deltaTime);
-
-        
     }
 }
