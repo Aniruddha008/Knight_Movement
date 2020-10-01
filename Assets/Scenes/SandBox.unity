@@ -366,50 +366,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.11271214, y: -0, z: -0, w: 0.9936277}
-  m_LocalPosition: {x: 0.000077962875, y: 0.76, z: -1.97}
+  m_LocalPosition: {x: 0, y: 1.6919999, z: -2.0005112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 973249098}
-  m_RootOrder: 1
+  m_Father: {fileID: 1086044569}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 12.943001, y: 0, z: 0}
---- !u!1 &973249097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 973249098}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &973249098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973249097}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000077962875, y: 0.97098404, z: -0.030511022}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1086044569}
-  - {fileID: 963194228}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1086044568
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 973249098}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 100074, guid: 5ca722d462dcae44ab07499720251307, type: 3}
       propertyPath: m_Name
@@ -417,15 +385,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 5ca722d462dcae44ab07499720251307, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000077962875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 5ca722d462dcae44ab07499720251307, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.97098404
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 5ca722d462dcae44ab07499720251307, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.030511022
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 5ca722d462dcae44ab07499720251307, type: 3}
       propertyPath: m_LocalRotation.x
@@ -445,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 5ca722d462dcae44ab07499720251307, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 5ca722d462dcae44ab07499720251307, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -463,6 +431,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3740865728e3fbe49a68f49b126179c6, type: 2}
+    - target: {fileID: 9500000, guid: 5ca722d462dcae44ab07499720251307, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ca722d462dcae44ab07499720251307, type: 3}
 --- !u!4 &1086044569 stripped
@@ -504,10 +476,26 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1.8
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &1086044574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086044570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca3811549017784abb3738d8452a200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  rotation: 0
+  rotationSpeed: 80
+  gravity: 8
